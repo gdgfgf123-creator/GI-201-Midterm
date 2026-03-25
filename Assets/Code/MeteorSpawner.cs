@@ -3,8 +3,8 @@ using UnityEngine;
 public class MeteorSpawner : MonoBehaviour
 {
     public GameObject meteorPrefab;
-    public float spawnRate = 2f;
-    public float areaSize = 20f;
+    public float spawnRate = 2f; //ความเร็วการตก
+    public float areaSize = 20f; //ระยะการตก
 
     void Start()
     {
