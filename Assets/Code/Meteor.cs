@@ -16,8 +16,11 @@ public class Meteor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player Hit!");
-            // ใส่ระบบลด HP ได้ตรงนี้
+            PlayerController ps = collision.gameObject.GetComponent<PlayerController>();
+            if (ps != null)
+            {
+                ps.TakeDamage(30f);
+            }
         }
 
         Destroy(gameObject, 0.5f);
