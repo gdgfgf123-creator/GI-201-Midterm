@@ -149,8 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeteorSpawner
   meteorPrefab: {fileID: 4178124831731946901, guid: 2af6c8b55d44b6a468fabb8807b47eac, type: 3}
+  warningPrefab: {fileID: 444835647075659630, guid: 92b61a0b8a6acca40aae542ac22e545f, type: 3}
+  spawnRange: 20
+  spawnHeight: 20
+  delayBeforeFall: 1.5
   spawnRate: 0.2
-  areaSize: 20
 --- !u!4 &249656156
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,7 +1448,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.4437704, y: 5.4437704, z: 12.5027075}
+  m_LocalScale: {x: 5.4437704, y: 0.01, z: 12.5027075}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
