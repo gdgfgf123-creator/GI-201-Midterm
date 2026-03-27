@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - TrackingObject
+  - Key
   layers:
   - Default
   - TransparentFX
