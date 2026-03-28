@@ -11,11 +11,25 @@ public class PlayerController : MonoBehaviour
     public HPBar hpBar;
     Rigidbody rb;
     bool isGrounded;
+    public int score = 0;
+    public static PlayerController instance;
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject); // กันซ้ำ
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        DontDestroyOnLoad(gameObject);
         // ?? ล็อคไม่ให้ล้ม/หมุนมั่ว
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
@@ -108,5 +122,10 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         hp -= dmg;
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
     }
 }
