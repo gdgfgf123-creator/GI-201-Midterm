@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 12f;
     public float hp = 100f;
     public float food = 50f;
-
+    public HPBar hpBar;
     Rigidbody rb;
     bool isGrounded;
 
@@ -22,13 +22,14 @@ public class PlayerController : MonoBehaviour
         // ?? ≈¥°“√‰∂≈
         rb.drag = 3f;
         rb.angularDrag = 5f;
+        hpBar.SetMaxHP(hp);
     }
 
     void Update()
     {
         Rotate();
         Jump();
-
+        hpBar.SetHP(hp);
         // √–∫∫Õ“À“√
         food -= Time.deltaTime * 2f;
         if (food <= 0)
